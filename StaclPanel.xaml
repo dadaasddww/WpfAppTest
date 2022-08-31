@@ -1,0 +1,124 @@
+﻿<Window x:Class="WpfApp1.StaclPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="StaclPanel" Height="700" Width="600">
+    <Grid ShowGridLines="True">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" >
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+
+        </StackPanel>
+        <WrapPanel Orientation="Vertical" Grid.Row="1">
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <Button Height="40" Width="60"/>
+            <ComboBox  Width="50" Height="30">
+                <ComboBoxItem Content="555"/>
+                <ComboBoxItem Content="666"/>
+                <ComboBoxItem Content="777"/>
+                <ComboBoxItem Content="888"/>
+
+            </ComboBox>
+        </WrapPanel>
+        <DockPanel Margin="5"  Grid.Column="1" Grid.Row="1" LastChildFill="False">
+            <Button DockPanel.Dock="Left" Height="40" Width="60"/>
+            <Button DockPanel.Dock="Top" Height="40" Width="60"/>
+            <Button DockPanel.Dock="Bottom" Height="40" Width="60"/>
+            <Button DockPanel.Dock="Right" Height="40" Width="60"/>
+        </DockPanel>
+
+        <Button Grid.Column="1" Height="100" Width="300">
+            <StackPanel Orientation="Horizontal">
+                <!--图片资源设置属性为资源，不然不显示-->
+                <Image  Source=".\data\viewphoto.jpg" Stretch="Fill" Height="50" Width="100"></Image>
+                <Label Content="计算" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            </StackPanel>
+        </Button>
+        <TabControl Margin="5"  Grid.Column="0" Grid.Row="2">
+            <TabItem Header="页面1"/>
+            <TabItem Header="页面2"/>
+            <TabItem Header="页面3"/>
+            <TabItem Header="页面4"/>
+            <TabItem Header="页面5"/>
+            <TabItem Header="页面6"/>
+            <TabItem Header="页面7"/>
+        </TabControl>
+        <GroupBox Margin="5"  Grid.Column="1" Grid.Row="2" Header="组1">
+            <!--Width可以设置为Auto自动填充区域-->
+            <TextBlock Text="kkkkkk" Width="Auto"></TextBlock>
+        </GroupBox>
+        <!--常见控件-->
+        <StackPanel Grid.Row="3">
+            <Expander Header="One" Margin="5" Padding="5">
+                <TextBlock TextWrapping="Wrap">Ofo has been favored by the public, even the foreign people speak highly of it. These yellow
+            bikes can be found everywhere, so the people who are in a hurry can
+            use it and then reached the destination in time.</TextBlock>
+            </Expander>
+
+            <Expander Header="Two" Margin="5" Padding="5">
+                <TextBlock TextWrapping="Wrap">Especially for the visitors, they can ride these bikes and then have a look at the scenery around.</TextBlock>
+            </Expander>
+
+            <Expander Header="Three" Margin="5" Padding="5">
+                <TextBlock TextWrapping="Wrap">It can saves them a lot of money and the most important thing is the convenience it brings.</TextBlock>
+            </Expander>
+
+        </StackPanel>
+        <!--ListBox-->
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <ListBox>
+                <ListBoxItem>
+                    <Button>♥ button1</Button>
+                </ListBoxItem>
+            </ListBox>
+
+            <ListBox>
+                <ListBoxItem>
+                    <Button>♥ button2</Button>
+                </ListBoxItem>
+            </ListBox>
+
+            <ListBox>
+                <ListBoxItem>
+                    <Button>♥ button3</Button>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        <!--ProgressBar-->
+        <StackPanel Margin="5" Grid.Row="4" Grid.Column="0">
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="Green" ></ProgressBar>
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="Red" ></ProgressBar>
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="Chocolate" ></ProgressBar>
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="DarkSalmon" ></ProgressBar>
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="Pink" ></ProgressBar>
+            <ProgressBar Margin="2" IsIndeterminate="True" Height="30" Foreground="DodgerBlue" ></ProgressBar>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
